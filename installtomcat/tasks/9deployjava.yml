@@ -2,7 +2,9 @@
 - name: deploy java application
   get_url:
    url: http://52.90.191.45:8081/artifactory/kalyani/{{buildno}}/target/maven-simple-0.2-SNAPSHOT.jar
-   dest: /opt/tomcat/webapps/mahaLogin.war
+   dest: /opt/tomcat/webapps/mahaLogin.jar
+   username: admin
+   password: password
    force_basic_auth: yes
   notify: tom restart
 
